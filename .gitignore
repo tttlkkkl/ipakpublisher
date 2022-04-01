@@ -24,3 +24,5 @@ _testmain.go
 *.prof
 ipakpublisher
 t.go
+.DS_Store
+.vscode

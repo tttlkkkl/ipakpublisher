@@ -1,0 +1,60 @@
+{
+	"attributes": {
+		"appStoreState": "PREPARE_FOR_SUBMISSION",
+		"copyright": "Slope Group Ltd.",
+		"createdDate": "2021-09-29T01:42:14-0700",
+		"downloadable": true,
+		"platform": "IOS",
+		"releaseType": "MANUAL",
+		"versionString": "0.0.1"
+	},
+	"id": "0719260a-7bf8-4f66-9ed4-c56c7c530a11",
+	"links": {
+		"self": "https://api.appstoreconnect.apple.com/v1/appStoreVersions/0719260a-7bf8-4f66-9ed4-c56c7c530a11"
+	},
+	"relationships": {
+		"appStoreReviewDetail": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/appStoreVersions/0719260a-7bf8-4f66-9ed4-c56c7c530a11/appStoreReviewDetail",
+				"self": "https://api.appstoreconnect.apple.com/v1/appStoreVersions/0719260a-7bf8-4f66-9ed4-c56c7c530a11/relationships/appStoreReviewDetail"
+			}
+		},
+		"appStoreVersionLocalizations": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/appStoreVersions/0719260a-7bf8-4f66-9ed4-c56c7c530a11/appStoreVersionLocalizations",
+				"self": "https://api.appstoreconnect.apple.com/v1/appStoreVersions/0719260a-7bf8-4f66-9ed4-c56c7c530a11/relationships/appStoreVersionLocalizations"
+			}
+		},
+		"appStoreVersionPhasedRelease": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/appStoreVersions/0719260a-7bf8-4f66-9ed4-c56c7c530a11/appStoreVersionPhasedRelease",
+				"self": "https://api.appstoreconnect.apple.com/v1/appStoreVersions/0719260a-7bf8-4f66-9ed4-c56c7c530a11/relationships/appStoreVersionPhasedRelease"
+			}
+		},
+		"appStoreVersionSubmission": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/appStoreVersions/0719260a-7bf8-4f66-9ed4-c56c7c530a11/appStoreVersionSubmission",
+				"self": "https://api.appstoreconnect.apple.com/v1/appStoreVersions/0719260a-7bf8-4f66-9ed4-c56c7c530a11/relationships/appStoreVersionSubmission"
+			}
+		},
+		"build": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/appStoreVersions/0719260a-7bf8-4f66-9ed4-c56c7c530a11/build",
+				"self": "https://api.appstoreconnect.apple.com/v1/appStoreVersions/0719260a-7bf8-4f66-9ed4-c56c7c530a11/relationships/build"
+			}
+		},
+		"idfaDeclaration": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/appStoreVersions/0719260a-7bf8-4f66-9ed4-c56c7c530a11/idfaDeclaration",
+				"self": "https://api.appstoreconnect.apple.com/v1/appStoreVersions/0719260a-7bf8-4f66-9ed4-c56c7c530a11/relationships/idfaDeclaration"
+			}
+		},
+		"routingAppCoverage": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/appStoreVersions/0719260a-7bf8-4f66-9ed4-c56c7c530a11/routingAppCoverage",
+				"self": "https://api.appstoreconnect.apple.com/v1/appStoreVersions/0719260a-7bf8-4f66-9ed4-c56c7c530a11/relationships/routingAppCoverage"
+			}
+		}
+	},
+	"type": "appStoreVersions"
+}

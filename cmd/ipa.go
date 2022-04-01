@@ -23,23 +23,20 @@ import (
 	"github.com/tttlkkkl/ipakpublisher/service"
 )
 
-// initCmd represents the init command
-var initCmd = &cobra.Command{
-	Use:   "init",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+var appleArgs service.AppleCmdArgs
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+// initCmd represents the init command
+var ipaCmd = &cobra.Command{
+	Use:   "ipa",
+	Short: "Perform IPA related operations",
+	Long:  `Perform IPA related operations.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		svc, err := service.NewAppleService(&cmdLineArgs)
+		svc, err := service.NewAppleService(&cmdLineArgs, &appleArgs)
 		if err != nil {
 			com.Log.Error(err)
 			os.Exit(1)
 		}
-		if err := svc.InitLocalWorkDir(); err != nil {
+		if err := svc.Ipa(); err != nil {
 			com.Log.Error(err)
 			os.Exit(1)
 		}
@@ -47,7 +44,7 @@ to quickly create a Cobra application.`,
 }
 
 func init() {
-	rootCmd.AddCommand(initCmd)
+	rootCmd.AddCommand(ipaCmd)
 
 	// Here you will define your flags and configuration settings.
 
@@ -58,4 +55,7 @@ func init() {
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
 	// initCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	ipaCmd.Flags().BoolVarP(&appleArgs.Init, "init", "i", false, "If you specify this option, metadata is downloaded from the API and an attempt is made to overwrite the local record.When this operation is completed, the program terminates.")
+	ipaCmd.Flags().StringVarP(&appleArgs.BundleID, "bundle-id", "b", "", "Specify the ipa bundleid.")
+	ipaCmd.Flags().StringVarP(&appleArgs.Platform, "platform", "p", "IOS", "Specify the platform.")
 }

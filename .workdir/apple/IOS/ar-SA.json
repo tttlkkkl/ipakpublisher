@@ -1,0 +1,27 @@
+{
+	"attributes": {
+		"locale": "ar-SA",
+		"marketingUrl": "https://slope.finance",
+		"promotionalText": "Slope is a mobile cryptocurrency wallet and browser extension that enables you to safely manage assets on the Solana blockchain.",
+		"supportUrl": "https://slope.finance"
+	},
+	"id": "becbc10a-6254-41fd-99e1-e63b1d50355e",
+	"links": {
+		"self": "https://api.appstoreconnect.apple.com/v1/appStoreVersionLocalizations/becbc10a-6254-41fd-99e1-e63b1d50355e"
+	},
+	"relationships": {
+		"appPreviewSets": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/appStoreVersionLocalizations/becbc10a-6254-41fd-99e1-e63b1d50355e/appPreviewSets",
+				"self": "https://api.appstoreconnect.apple.com/v1/appStoreVersionLocalizations/becbc10a-6254-41fd-99e1-e63b1d50355e/relationships/appPreviewSets"
+			}
+		},
+		"appScreenshotSets": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/appStoreVersionLocalizations/becbc10a-6254-41fd-99e1-e63b1d50355e/appScreenshotSets",
+				"self": "https://api.appstoreconnect.apple.com/v1/appStoreVersionLocalizations/becbc10a-6254-41fd-99e1-e63b1d50355e/relationships/appScreenshotSets"
+			}
+		}
+	},
+	"type": "appStoreVersionLocalizations"
+}

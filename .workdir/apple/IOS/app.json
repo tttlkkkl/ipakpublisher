@@ -1,0 +1,102 @@
+{
+	"attributes": {
+		"availableInNewTerritories": false,
+		"bundleId": "com.dex.slope",
+		"contentRightsDeclaration": "DOES_NOT_USE_THIRD_PARTY_CONTENT",
+		"isOrEverWasMadeForKids": false,
+		"name": "Slope Dex",
+		"primaryLocale": "en-US",
+		"sku": "com.dex.slope"
+	},
+	"id": "1588045150",
+	"links": {
+		"self": "https://api.appstoreconnect.apple.com/v1/apps/1588045150"
+	},
+	"relationships": {
+		"appInfos": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/appInfos",
+				"self": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/relationships/appInfos"
+			}
+		},
+		"appStoreVersions": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/appStoreVersions",
+				"self": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/relationships/appStoreVersions"
+			}
+		},
+		"availableTerritories": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/availableTerritories",
+				"self": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/relationships/availableTerritories"
+			}
+		},
+		"betaAppLocalizations": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/betaAppLocalizations",
+				"self": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/relationships/betaAppLocalizations"
+			}
+		},
+		"betaAppReviewDetail": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/betaAppReviewDetail",
+				"self": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/relationships/betaAppReviewDetail"
+			}
+		},
+		"betaGroups": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/betaGroups",
+				"self": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/relationships/betaGroups"
+			}
+		},
+		"betaLicenseAgreement": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/betaLicenseAgreement",
+				"self": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/relationships/betaLicenseAgreement"
+			}
+		},
+		"builds": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/builds",
+				"self": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/relationships/builds"
+			}
+		},
+		"endUserLicenseAgreement": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/endUserLicenseAgreement",
+				"self": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/relationships/endUserLicenseAgreement"
+			}
+		},
+		"gameCenterEnabledVersions": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/gameCenterEnabledVersions",
+				"self": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/relationships/gameCenterEnabledVersions"
+			}
+		},
+		"inAppPurchases": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/inAppPurchases",
+				"self": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/relationships/inAppPurchases"
+			}
+		},
+		"preOrder": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/preOrder",
+				"self": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/relationships/preOrder"
+			}
+		},
+		"preReleaseVersions": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/preReleaseVersions",
+				"self": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/relationships/preReleaseVersions"
+			}
+		},
+		"prices": {
+			"links": {
+				"related": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/prices",
+				"self": "https://api.appstoreconnect.apple.com/v1/apps/1588045150/relationships/prices"
+			}
+		}
+	},
+	"type": "apps"
+}

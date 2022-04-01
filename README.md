@@ -32,8 +32,8 @@ PrivateKeyFile ="/filepath"
 ```
 - Using environment variables
 ```bash
- export AT_KEYID=xxx
- export AT_ISSUERID=yyy
- export AT_PRIVATEKEYFILE=/path
- export AT_EXPIRYDURATION=20s
+ export AT_APPLE_KEYID=xxx
+ export AT_APPLE_ISSUERID=yyy
+ export AT_APPLE_PRIVATEKEYFILE=/path
+ export AT_APPLE_EXPIRYDURATION=20s
 ```

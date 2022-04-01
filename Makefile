@@ -4,4 +4,4 @@ build:
 	GOOS=darwin GOARCH=amd64 CGO_ENABLED=0 go build -ldflags="-s -w" -o  ipakpublisher-darwin-amd64 -work $(shell pwd)/
 run:
 	go build -o ipakpublisher
-	./ipakpublisher -c $(shell pwd)/config.toml -w $(shell pwd)/.workdir init
+	./ipakpublisher -c $(shell pwd)/../config.toml -w $(shell pwd)/.workdir ipa -i -b 'com.dex.slope'

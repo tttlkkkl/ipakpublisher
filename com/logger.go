@@ -10,5 +10,5 @@ var Log *log.Entry
 func init() {
 	log.SetReportCaller(true)
 	// 日志前缀设置
-	Log = log.WithField("pkg", "appstoreconnect")
+	Log = log.WithField("pkg", "ipakpublisher")
 }

@@ -26,7 +26,7 @@ import (
 	"github.com/spf13/viper"
 )
 
-var cmdLineArgs service.CmdLineArgs
+var cmdLineArgs service.CmdArgs
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
@@ -35,6 +35,7 @@ var rootCmd = &cobra.Command{
 	Long: `When you use the upload tool provided by IOS to upload the app to the app store.
 For example, Xcode, altool, transporter.
 You can then use this program to complete the subsequent review steps.
+
 At the same time, it also uses the Google play developer API to upload and distribute Android apps.
 It is divided into two steps: uploading application files and publishing applications.
 In this program, you can choose whether to publish after uploading APK.
@@ -61,7 +62,7 @@ func init() {
 	// will be global for your application.
 
 	rootCmd.PersistentFlags().StringVarP(&cmdLineArgs.ConfigFile, "config", "c", "", "config file for app store connect api auth (default is $HOME/.ipakpublisher.toml)")
-	rootCmd.PersistentFlags().StringVarP(&cmdLineArgs.WorkDir, "workdir", "w", "", "workdir path (default is $(pwd))")
+	rootCmd.PersistentFlags().StringVarP(&cmdLineArgs.RootPath, "workdir", "w", "", "workdir path (default is $(pwd))")
 }
 
 // initConfig reads in config file and ENV variables if set.
