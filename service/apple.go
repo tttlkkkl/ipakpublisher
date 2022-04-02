@@ -7,14 +7,18 @@ import (
 
 	"github.com/spf13/viper"
 	"github.com/tttlkkkl/asc-go/asc"
+	"github.com/tttlkkkl/ipakpublisher/com"
 )
 
 // AppleCmdArgs apple 关联的命令行参数
 type AppleCmdArgs struct {
 	// Init 是否从 api 拉取数据并覆盖本地设置
-	Init     bool
+	Init bool
+	// 是否将本地元数据同步到api
+	Sync     bool
 	BundleID string
 	Platform string
+	Version  string
 	Auth     AppStoreAuth
 }
 
@@ -30,28 +34,15 @@ type AppStoreAuth struct {
 	privateKeyData []byte
 }
 
-// MetaVersionLocalization 多语言化版本信息
-type MetaVersionLocalization struct {
-	Description     string `toml:"description"`
-	Keywords        string `toml:"keywords"`
-	MarketingURL    string `toml:"marketing_url"`
-	PromotionalText string `toml:"promotional_text"`
-	SupportURL      string `toml:"support_url"`
-}
-
-// AppleMetaData apple 应用元数据
-type AppleMetaData struct {
-	MetaVersionLocalization []MetaVersionLocalization
-}
-
 // AppleService apple
 type AppleService struct {
 	Service
 	client    *asc.Client
 	AppleArgs *AppleCmdArgs
+	SubDir    string
 }
 
-func initConfig(args *AppleCmdArgs) (err error) {
+func initAppleConfig(args *AppleCmdArgs) (err error) {
 	args.Auth.KeyID = viper.GetString("apple.KeyID")
 	args.Auth.IssuerID = viper.GetString("apple.IssuerID")
 	args.Auth.ExpiryDuration = viper.GetDuration("apple.ExpiryDuration")
@@ -79,12 +70,19 @@ func initConfig(args *AppleCmdArgs) (err error) {
 }
 
 func NewAppleService(cmdArgs *CmdArgs, appleArgs *AppleCmdArgs) (*AppleService, error) {
-	if err := initConfig(appleArgs); err != nil {
+	if err := initAppleConfig(appleArgs); err != nil {
 		return nil, err
 	}
 	auth, err := asc.NewTokenConfig(appleArgs.Auth.KeyID, appleArgs.Auth.IssuerID, appleArgs.Auth.ExpiryDuration, appleArgs.Auth.privateKeyData)
 	if err != nil {
 		return nil, err
 	}
-	return &AppleService{Service: Service{CmdArgs: cmdArgs}, client: asc.NewClient(auth.Client()), AppleArgs: appleArgs}, nil
+	c := &AppleService{
+		Service:   Service{CmdArgs: cmdArgs},
+		client:    asc.NewClient(auth.Client()),
+		AppleArgs: appleArgs,
+		SubDir:    cmdArgs.Workdir.SubPath(com.SubDirApple),
+	}
+	// c.client.SetHTTPDebug(true)
+	return c, nil
 }

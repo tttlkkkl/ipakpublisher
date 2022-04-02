@@ -33,11 +33,11 @@ var ipaCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		svc, err := service.NewAppleService(&cmdLineArgs, &appleArgs)
 		if err != nil {
-			com.Log.Error(err)
+			com.Log.Error(err.Error())
 			os.Exit(1)
 		}
 		if err := svc.Ipa(); err != nil {
-			com.Log.Error(err)
+			com.Log.Error(err.Error())
 			os.Exit(1)
 		}
 	},
@@ -56,6 +56,8 @@ func init() {
 	// is called directly, e.g.:
 	// initCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 	ipaCmd.Flags().BoolVarP(&appleArgs.Init, "init", "i", false, "If you specify this option, metadata is downloaded from the API and an attempt is made to overwrite the local record.When this operation is completed, the program terminates.")
+	ipaCmd.Flags().BoolVarP(&appleArgs.Sync, "sync", "s", false, "If you specify this option, To simultaneously transfer the local data to the remote location through API.")
 	ipaCmd.Flags().StringVarP(&appleArgs.BundleID, "bundle-id", "b", "", "Specify the ipa bundleid.")
 	ipaCmd.Flags().StringVarP(&appleArgs.Platform, "platform", "p", "IOS", "Specify the platform.")
+	ipaCmd.Flags().StringVarP(&appleArgs.Version, "version", "v", "", "the app version string,e.g. 1.0.0")
 }
