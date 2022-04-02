@@ -26,3 +26,4 @@ ipakpublisher
 t.go
 .DS_Store
 .vscode
+.workdir
