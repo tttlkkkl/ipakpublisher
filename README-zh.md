@@ -1,8 +1,12 @@
 ## ipakpublisher cli
 本应用程序通过苹果 App store api 和 google play api 实现 app 的管理工作。主要用于自动化流水线。
+
 苹果的不具备文件上传功能，仍然需要通过苹果官方提供的命令行工具进行上传。然后通过本程序完成提审元数据填充，有多个国家地区支持时特别有用。之后仍然需要手动提审。
+
 google 的可以上传 apk 、aab 包并发送到对应的渠道。如 alpha、beta、internal、production。
+
 apple api 参考：[App Store Connect API](https://developer.apple.com/documentation/ipakpublisherapi).
+
 google api 参考：[Google Play Developer API](https://developers.google.com/android-publisher/api-ref/rest).
 
 ## 安装

@@ -5,6 +5,7 @@ This program can be limited to help you edit the application information on the 
 It will work well in CI / CD automation pipeline.
 
 Realize the command line operation of [App Store Connect API](https://developer.apple.com/documentation/ipakpublisherapi).
+
 Realize the command line operation of [Google Play Developer API](https://developers.google.com/android-publisher/api-ref/rest).
 
 ## Usage
@@ -23,6 +24,7 @@ PrivateKeyFile ="/path/xxxx.p8"
 [google]
 application_credentials_file=""
 ```
+
 - Using environment variables
 ```bash
  export AT_APPLE_KEYID=xxx
