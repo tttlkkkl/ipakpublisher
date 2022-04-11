@@ -6,6 +6,7 @@ apple api 参考：[App Store Connect API](https://developer.apple.com/documenta
 google api 参考：[Google Play Developer API](https://developers.google.com/android-publisher/api-ref/rest).
 
 ## 安装
+下载对应平台二进制文件，并放到本机 $PATH 环境变量包含的任意执行目录中。
 ## 使用
 ### 配置
 - 需要提供 api 访问授权配置，配置文件格式如下：

@@ -1,3 +1,4 @@
+[中文说明](README-zh.md)
 ## ipakpublisher cli
 This program can be limited to help you edit the application information on the Apple App store. Help you upload and publish apps to Google play.
 

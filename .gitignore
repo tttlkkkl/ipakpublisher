@@ -27,3 +27,6 @@ t.go
 .DS_Store
 .vscode
 .workdir
+ipakpublisher-linux-amd64
+ipakpublisher-windows-amd64.exe
+ipakpublisher-darwin-amd64
