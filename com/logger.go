@@ -8,7 +8,7 @@ import (
 var Log *log.Entry
 
 func init() {
-	log.SetReportCaller(true)
+	log.SetReportCaller(false)
 	// 日志前缀设置
 	Log = log.WithField("pkg", "ipakpublisher")
 }

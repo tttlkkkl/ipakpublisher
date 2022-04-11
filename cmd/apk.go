@@ -16,9 +16,11 @@ limitations under the License.
 package cmd
 
 import (
-	"fmt"
+	"os"
 
 	"github.com/spf13/cobra"
+	"github.com/tttlkkkl/ipakpublisher/com"
+	"github.com/tttlkkkl/ipakpublisher/service"
 )
 
 // apkCmd represents the apk command
@@ -27,7 +29,15 @@ var apkCmd = &cobra.Command{
 	Short: "push the apk file",
 	Long:  `Use this command when you want to publish an app in APK format`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("apk called")
+		svc, err := service.NewGoogleService(&cmdLineArgs, &googleArgs)
+		if err != nil {
+			com.Log.Error(err)
+			os.Exit(1)
+		}
+		if err := svc.Do("apk"); err != nil {
+			com.Log.Error(err)
+			os.Exit(1)
+		}
 	},
 }
 

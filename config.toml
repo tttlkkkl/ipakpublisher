@@ -8,4 +8,4 @@ ExpiryDuration ="20m"
 # The bytes of the PKCS#8 private key created on App Store Connect. Keep this key safe as you can only download it once.
 PrivateKeyFile ="/path/xxxx.p8"
 [google]
-GOOGLE_APPLICATION_CREDENTIALS=""
+application_credentials_file=""
