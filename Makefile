@@ -4,10 +4,10 @@ build:
 	GOOS=darwin GOARCH=amd64 CGO_ENABLED=0 go build -ldflags="-s -w" -o  ipakpublisher-darwin-amd64 -work $(shell pwd)/
 ipas:
 	go build -o ipakpublisher
-	./ipakpublisher -c $(shell pwd)/../config.toml -w $(shell pwd)/.workdir ipa -s -b 'com.dex.ss' -v '0.0.1'
+	./ipakpublisher -c $(shell pwd)/../config.toml -w $(shell pwd)/.workdir ipa -s -b 'com.zly.ss' -v '3.1.3'
 ipai:
 	go build -o ipakpublisher
-	./ipakpublisher -c $(shell pwd)/../config.toml -w $(shell pwd)/.workdir ipa -i -b 'com.zly.ss' -v '2.1.0'
+	./ipakpublisher -c $(shell pwd)/../config.toml -w $(shell pwd)/.workdir ipa -i -b 'com.zly.xx' -v '2.1.3'
 aabi:
 	go build -o ipakpublisher
 	./ipakpublisher -c $(shell pwd)/../config.toml -w $(shell pwd)/.workdir aab -i

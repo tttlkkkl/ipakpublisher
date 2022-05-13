@@ -192,7 +192,7 @@ func (s *AppleService) syncMetadata(ctx context.Context, subDir string) error {
 					SupportURL:      locData.SupportURL,
 				}
 				// 只有从线上读到这个字段才能执行更新
-				if locLineV.IsWhatNew {
+				if true || locLineV.IsWhatNew {
 					data.WhatsNew = locData.WhatsNew
 				}
 				if _, _, err := s.client.Apps.UpdateAppStoreVersionLocalization(ctx, locLineV.VersionData.ID, &data); err != nil {
@@ -219,12 +219,12 @@ func (s *AppleService) getLocalizationMap(ctx context.Context, versionID string)
 	if err != nil {
 		return rs, err
 	}
+	val := VersionOnline{
+		IsWhatNew: false,
+	}
 	for _, v := range localizations.Data {
+		val.VersionData = v
 		k := *v.Attributes.Locale
-		val := VersionOnline{
-			VersionData: v,
-			IsWhatNew:   false,
-		}
 		if v.Attributes.WhatsNew != nil {
 			val.IsWhatNew = true
 		}
